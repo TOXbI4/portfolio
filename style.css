@@ -8,10 +8,19 @@ body {
 /* ===== HEADER ===== */
 
 header {
+    position: relative;
     background: #111;
     padding: 100px 20px;
     text-align: center;
     border-bottom: 1px solid #222;
+    overflow: hidden;
+}
+
+header h1,
+header p,
+nav {
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
@@ -39,39 +48,79 @@ nav a:hover {
     color: #fff;
 }
 
+/* ===== РОМБИКИ ===== */
 
+.diamond {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #000;
+    opacity: 0.12;
+    transform: rotate(45deg);
+    animation: spin 60s linear infinite;
+    z-index: 1;
+}
 
-/* ===== HERO 4K IMAGE ===== */
+@keyframes spin {
+    from { transform: rotate(45deg) rotate(0deg); }
+    to   { transform: rotate(45deg) rotate(360deg); }
+}
+
+.d1 { top: 20%; left: 15%; }
+.d2 { top: 60%; left: 30%; }
+.d3 { top: 40%; left: 70%; }
+.d4 { top: 75%; left: 50%; }
+.d5 { top: 30%; left: 85%; }
+
+/* ===== HERO LOGO ===== */
 
 .hero-logo {
-    height: 600px; 
+    position: relative;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #222;
     background: #0f0f0f;
+    overflow: hidden;
 }
 
 .logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* чтобы не обрезало */
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    transition: 0.6s ease;
 }
 
 .logo-img:hover {
     transform: scale(1.05);
 }
 
-/* Разные позиции и скорости */
+/* ===== КВАДРАТЫ ===== */
 
-.s1 { top: 20%; left: 10%; animation-duration: 60s; }
-.s2 { top: 60%; left: 25%; animation-duration: 50s; }
-.s3 { top: 40%; left: 45%; animation-duration: 70s; }
-.s4 { top: 70%; left: 65%; animation-duration: 55s; }
-.s5 { top: 30%; left: 80%; animation-duration: 65s; }
-.s6 { top: 50%; left: 15%; animation-duration: 75s; }
-.s7 { top: 25%; left: 55%; animation-duration: 80s; }
-.s8 { top: 65%; left: 90%; animation-duration: 90s; }
+.square {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #000;
+    opacity: 0.08;
+    animation: rotate 50s linear infinite;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.s1 { top: 20%; left: 10%; }
+.s2 { top: 70%; left: 25%; }
+.s3 { top: 40%; left: 60%; }
+.s4 { top: 65%; left: 80%; }
+.s5 { top: 30%; left: 45%; }
 
 /* ===== ОСНОВНЫЕ СЕКЦИИ ===== */
 
@@ -86,6 +135,8 @@ h2 {
     border-bottom: 1px solid #222;
     padding-bottom: 10px;
 }
+
+/* ===== НАВЫКИ ===== */
 
 .skills {
     display: grid;
@@ -107,13 +158,6 @@ h2 {
     border-color: #444;
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #111;
-    border-top: 1px solid #222;
-    color: #777;
-}
 /* ===== ИНТЕРЕСЫ ===== */
 
 .interests {
@@ -135,57 +179,12 @@ footer {
     border-color: #333;
 }
 
-/* ===== РОМБИКИ В ШАПКЕ ===== */
+/* ===== FOOTER ===== */
 
-header {
-    position: relative;
-    overflow: hidden;
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    border-top: 1px solid #222;
+    color: #777;
 }
-
-.diamond {
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    background: #000;
-    opacity: 0.12;
-    transform: rotate(45deg);
-    animation: spin 60s linear infinite;
-}
-
-@keyframes spin {
-    from { transform: rotate(45deg) rotate(0deg); }
-    to   { transform: rotate(45deg) rotate(360deg); }
-}
-
-.d1 { top: 20%; left: 15%; }
-.d2 { top: 60%; left: 30%; }
-.d3 { top: 40%; left: 70%; }
-.d4 { top: 75%; left: 50%; }
-.d5 { top: 30%; left: 85%; }
-
-/* ===== КВАДРАТЫ ПОД ЛОГО ===== */
-
-.hero-logo {
-    position: relative;
-    overflow: hidden;
-}
-
-.square {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background: #000;
-    opacity: 0.08;
-    animation: rotate 50s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-}
-
-.s1 { top: 20%; left: 10%; }
-.s2 { top: 70%; left: 25%; }
-.s3 { top: 40%; left: 60%; }
-.s4 { top: 65%; left: 80%; }
-.s5 { top: 30%; left: 45%; }
