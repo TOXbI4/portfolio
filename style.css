@@ -5,7 +5,7 @@ body {
     color: #e4e4e4;
 }
 
-/* ===== HEADER ===== */
+/*шапка*/
 
 header {
     position: relative;
@@ -13,14 +13,12 @@ header {
     padding: 100px 20px;
     text-align: center;
     border-bottom: 1px solid #222;
-    overflow: hidden;
 }
 
 header h1,
 header p,
 nav {
     position: relative;
-    z-index: 2;
 }
 
 header h1 {
@@ -48,41 +46,16 @@ nav a:hover {
     color: #fff;
 }
 
-/* ===== РОМБИКИ ===== */
-
-.diamond {
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    background: #000;
-    opacity: 0.12;
-    transform: rotate(45deg);
-    animation: spin 60s linear infinite;
-    z-index: 1;
-}
-
-@keyframes spin {
-    from { transform: rotate(45deg) rotate(0deg); }
-    to   { transform: rotate(45deg) rotate(360deg); }
-}
-
-.d1 { top: 20%; left: 15%; }
-.d2 { top: 60%; left: 30%; }
-.d3 { top: 40%; left: 70%; }
-.d4 { top: 75%; left: 50%; }
-.d5 { top: 30%; left: 85%; }
-
-/* ===== HERO LOGO ===== */
+/*логотип*/
 
 .hero-logo {
     position: relative;
-    height: 600px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #222;
     background: #0f0f0f;
-    overflow: hidden;
 }
 
 .logo-img {
@@ -99,30 +72,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* ===== КВАДРАТЫ ===== */
-
-.square {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background: #000;
-    opacity: 0.08;
-    animation: rotate 50s linear infinite;
-    z-index: 1;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-}
-
-.s1 { top: 20%; left: 10%; }
-.s2 { top: 70%; left: 25%; }
-.s3 { top: 40%; left: 60%; }
-.s4 { top: 65%; left: 80%; }
-.s5 { top: 30%; left: 45%; }
-
-/* ===== ОСНОВНЫЕ СЕКЦИИ ===== */
+/*основная секция*/
 
 section {
     padding: 80px 20px;
@@ -136,7 +86,7 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* ===== НАВЫКИ ===== */
+/*навыки*/
 
 .skills {
     display: grid;
@@ -158,7 +108,7 @@ h2 {
     border-color: #444;
 }
 
-/* ===== ИНТЕРЕСЫ ===== */
+/*интересы*/
 
 .interests {
     display: grid;
@@ -179,7 +129,7 @@ h2 {
     border-color: #333;
 }
 
-/* ===== FOOTER ===== */
+/*подвал*/
 
 footer {
     text-align: center;
